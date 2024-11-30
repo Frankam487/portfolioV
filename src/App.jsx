@@ -1,7 +1,21 @@
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import Home from './pages/Home';
+import About from './pages/About';
+import Projects from './pages/Projects';
+
 const App = () => {
   return (
-    <div>
-      <h1>je suis la <i className='bi bi-facebook' style={{ background: 'red'}}></i></h1>
+    <div className="app">
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/projects" element={<Projects />} />
+      </Routes>
+      <Footer />
     </div>
   );
 };
